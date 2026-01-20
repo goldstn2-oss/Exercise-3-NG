@@ -1,3 +1,12 @@
+/*
+Nathan Goldstein 1/19/2026
+This code uses an LED and a button using GPIO pins. 
+The LED is connected to GPIO pin 4, and the button is connected to GPIO pin 10. 
+The program monitors the button state and toggles the LED state (on/off) every 2 times the button is pressed.
+The button is configured with a pull-up resistor, meaning it reads high when not pressed and low when pressed. 
+The code includes debouncing logic to make sure the button presses are registered correctly
+*/
+
 #include "freertos/FreeRTOS.h"
 #include "driver/gpio.h"
 
